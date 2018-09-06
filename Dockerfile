@@ -7,7 +7,7 @@ ENV INSTANCE default
 
 RUN wget -O /tmp/apacheds.tar.gz ${DL_URL}
 RUN mkdir /usr/share/apacheds \
-    && tar -zxf /tmp/apacheds.tar.gz -c /usr/share/apacheds --strip-components=1 \
+    && tar -zxf /tmp/apacheds.tar.gz -C /usr/share/apacheds --strip-components=1 \
     && rm /tmp/apacheds.tar.gz \
     && apk --no-cache add bash \
     && rm /usr/share/apacheds/bin/*.bat
