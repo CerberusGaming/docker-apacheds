@@ -5,7 +5,7 @@ MAINTAINER Derek Vance <DACRepair@gmail.com>
 ENV DL_URL http://mirrors.sorengard.com/apache//directory/apacheds/dist/2.0.0.AM25/apacheds-2.0.0.AM25.tar.gz
 ENV INSTANCE default
 
-RUN wget -o /tmp/apacheds.tar.gz ${DL_URL}
+RUN wget -O /tmp/apacheds.tar.gz ${DL_URL}
 RUN mkdir /usr/share/apacheds \
     && tar -zxf /tmp/apacheds.tar.gz -c /usr/share/apacheds --strip-components=1 \
     && rm /tmp/apacheds.tar.gz \
